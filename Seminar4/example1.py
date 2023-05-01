@@ -1,19 +1,13 @@
 # Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с повторениями). Выдать без повторений в порядке возрастания все те числа, которые встречаются в обоих наборах.
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
-import random
+from random import randint
 
-n = int(input('введите количество элементов первого множества: '))
-n_max = int(input('введите максимальное значение элемента первого множества:'))
-list_1 = set([random.randint(0, n_max) fr i in range(n)])
-
-m = int(input('введите количество элементов второго множества: '))
-m_max = int(input('введите максимальное значение элемента второго множества:'))
-list_2 = set([random.randint(0, m_max) fr i in range(m)])
-
-print(list_1)
-print(list_2)
-
-i = list_1.intersection(list_2)
-sorted(i)
-print(i)
+n_set = set(randint(1, 20) for i in range(
+    int(input('Введите количество элементов первого множества: '))))
+print(n_set)
+m_set = set(randint(1, 20) for i in range(
+    int(input('Введите количество элементов второго множества: '))))
+print(m_set)
+s_set = sorted(n_set.intersection(m_set))
+print(s_set)

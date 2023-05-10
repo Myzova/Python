@@ -5,9 +5,16 @@
 # A = 2; B = 3 -> 8
 
 def power(A, B):
+<<<<<<< HEAD
     if B == 0:
         return 1
     return A * power(A, B - 1)
+=======
+    if B == 1:
+        return A
+    if B != 1:
+        return A * power(A, B - 1)
+>>>>>>> 60861c8cc199fa6f9fdc184ef57d229cb1f7336b
 
 
 A = int(input("Введите число: "))
